@@ -1,61 +1,110 @@
+/* GENERAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: #e6edf3;
-    overflow-x: hidden;
+    background: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
 }
 
-header {
+:root {
+    --bg: #0d1117;
+    --text: #e6edf3;
+    --card: #161b22;
+}
+
+.light {
+    --bg: #ffffff;
+    --text: #000000;
+    --card: #f0f0f0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--card);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
     text-align: center;
     padding: 80px 20px;
-    background: #161b22;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 900px;
-    margin: auto;
-}
-
-h2 {
-    border-bottom: 2px solid #30363d;
-    padding-bottom: 10px;
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
-.project {
-    background: #161b22;
+/* TYPING ANIMATION */
+.typing {
+    font-size: 32px;
+    font-weight: bold;
+    border-right: 3px solid var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* FLOATING ICONS */
+.floating-icons img {
+    width: 60px;
+    animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* PROJECT CARDS */
+.project-card {
+    background: var(--card);
     padding: 20px;
     margin: 20px 0;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-.project:hover {
-    transform: translateY(-5px);
+.project-card:hover {
+    transform: scale(1.03);
 }
 
-/* Fade-in animation */
+/* ANIMATIONS */
 .fade-in {
     opacity: 0;
-    transform: translateY(20px);
     animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    to { opacity: 1; }
 }
 
-/* Slide-up animation */
 .slide-up {
     opacity: 0;
     transform: translateY(40px);
@@ -67,4 +116,15 @@ h2 {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* CV BUTTON */
+.cv-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #238636;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 20px;
 }
