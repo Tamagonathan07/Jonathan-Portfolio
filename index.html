@@ -8,16 +8,44 @@
 </head>
 <body>
 
-<header class="fade-in">
-    <h1>Jonathan</h1>
-    <p>IT Support Specialist • Technopreneur • Digital Solutions Builder</p>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2 class="logo">Jonathan</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle">🌙</button>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero fade-in">
+    <img src="assets/me.jpg" class="profile-pic" alt="Jonathan Photo">
+
+    <h1>
+        <span class="typing"></span>
+    </h1>
+
+    <div class="floating-icons">
+        <img src="assets/azure.png">
+        <img src="assets/cisco.png">
+        <img src="assets/wordpress.png">
+        <img src="assets/aws.png">
+    </div>
+
+    <a href="assets/JonathanCV.pdf" class="cv-btn" download>Download CV</a>
 </header>
 
+<!-- ABOUT -->
 <section id="about" class="slide-up">
     <h2>About Me</h2>
     <p>I am an IT professional skilled in troubleshooting, automation, cloud identity, WordPress development, and digital innovation. I enjoy building solutions that make work easier and smarter.</p>
 </section>
 
+<!-- SKILLS -->
 <section id="skills" class="slide-up">
     <h2>Skills</h2>
     <ul>
@@ -32,26 +60,28 @@
     </ul>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects" class="slide-up">
     <h2>Projects</h2>
 
-    <div class="project fade-in">
+    <div class="project-card">
         <h3>Automation Workflow</h3>
         <p>Created a Power Automate workflow that reduced manual admin time by 40%.</p>
     </div>
 
-    <div class="project fade-in">
+    <div class="project-card">
         <h3>WordPress Business Website</h3>
         <p>Designed and deployed a full WordPress site for a local business.</p>
     </div>
 
-    <div class="project fade-in">
+    <div class="project-card">
         <h3>IT Support Case Studies</h3>
         <p>Documented troubleshooting processes and solutions for recurring issues.</p>
     </div>
 
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="slide-up">
     <h2>Contact</h2>
     <p>Email: your-email@example.com</p>
